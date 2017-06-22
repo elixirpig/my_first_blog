@@ -53,3 +53,15 @@
     .post h1 a, .post h1 a:visited {
         color: #000000;
     }
+    .register{
+        width: 700px;
+        height: 500px;
+        margin-left: 350px;
+        border: solid 2px #808080;
+    }
+    .register h1{
+        text-align: center;
+    }
+    .register .button{
+        margin-left: 255px;
+    }

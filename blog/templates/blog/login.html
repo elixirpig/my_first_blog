@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Авторизация </title>
+      <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+        <div class="page-header">
+            <h1><a href="/">Informations Blog</a></h1>
+        </div>
+            <h1>Вход на сайт</h1>
+        <div class="col-md-2">
+        <form action="" method="post" role="form">
+          {% csrf_token %}
+        <table class="table">
+                    <tbody>
+            <tr><td>
+            <label for="username">Имя пользователя</label>
+            <input type="text" name="username" id="username">
+            </tr></td>
+
+            <tr><td>
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password">
+            <tr></tr>
+
+            </tr></td>
+            {% if login_error %}
+                <label class="error">{{ login_error }}</label>
+            {% endif %}
+            <tr><dr>
+          <input class="btn btn-success" type="submit" value="Войти">
+          <th><div class="btn btn-default"><a href="{% url 'register' %}">Регитрация</a></div></th>
+                </tr></td>
+          </tr></td>
+        </tbody></table>
+        </form>
+        </div>
