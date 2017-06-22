@@ -78,3 +78,7 @@ def login(request):
             return render_to_response('blog/login.html', args)
     else:
         return render_to_response('blog/login.html', args)
+
+def logout(request):
+    auth.logout(request)
+    return redirect('post_list')
